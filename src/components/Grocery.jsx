@@ -1,6 +1,7 @@
 import GroceryInput from "./GroceryInput";
 import {useState} from "react";
 import GroceryList from "./GroceryList";
+import { nanoid } from "nanoid";
 
 export default function Grocery(){
 
@@ -9,7 +10,7 @@ export default function Grocery(){
     function AddGrocery(input){
         let grocery = {
             title : input, 
-            id : Date.now()
+            id : nanoid()
         }
         setGroceries([...groceries, grocery]);
     }
@@ -24,7 +25,7 @@ export default function Grocery(){
         <div>
             <GroceryInput AddGrocery = {AddGrocery} />
             {groceries.map((grocery)=>{
-                return <GroceryList grocery = {grocery} DeleteGrocery = {DeleteGrocery} />
+                return <GroceryList grocery = {grocery} DeleteGrocery = {DeleteGrocery} key = {grocery.id} />
             })}
         </div>
     );
