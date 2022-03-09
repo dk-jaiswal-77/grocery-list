@@ -1,5 +1,73 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* border: 1px solid red; */
+}
+
+.App > div{
+  border: 2px solid slategrey;
+  /* background-color: khaki; */
+  width: 35%;
+  margin: 2% auto;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 7px;
+}
+
+.App > div > div:first-child{
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.App > div > div:first-child > input{
+  flex-grow: 1;
+  padding: 1%;
+  color: grey;
+  font-size: 120%;
+}
+
+.App > div > div:first-child > button{
+  width: max-content;
+  font-size: 130%;
+  font-weight: bolder;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.App > div > div:first-child > button:hover{
+  background-color: rgb(61, 59, 59);
+}
+
+.App > div > div:first-child > button:active{
+  background-color: black;
+}
+
+.App > div > div.list{
+  background-color: #f7dee4;
+  border-radius: 5px;
+  padding: 1.7%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.App > div > div.list > button{
+  border: none;
+  padding: 3px 10px;
+  background-color: #e64b2e;
+  border-radius: 3px;
+  color: white;
+  font-size: 100%;
+  font-weight: bolder;
+}
+
+.App > div > div.list > button:hover{
+  background-color: black;
+}
+
+.App > div > div.list > button:active{
+  background-color: #e64b2e; 
 }
 
 .App-logo {
